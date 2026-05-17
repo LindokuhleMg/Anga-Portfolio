@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anga Siyoyo | Director</title>
+<title>Anga Siyoyo | Producer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
@@ -17,6 +17,81 @@
     --gold:#c8a96a;
     --gray:#a0a0a0;
 }
+
+
+/* ===== CREATIVE IDENTITY ===== */
+.identity{
+    padding:120px 8%;
+    background:#050505;
+}
+
+.identity-intro{
+    max-width:900px;
+    margin-bottom:70px;
+}
+
+.small-title{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.identity h2{
+    font-family:'Playfair Display';
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+.identity h2 span{
+    color:var(--gold);
+}
+
+.identity-intro p:last-child{
+    color:#b8b8b8;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.identity-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.identity-card{
+    border:1px solid rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.identity-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(200,169,106,0.4);
+}
+
+.identity-card p:last-child{
+    color:#b8b8b8;
+    line-height:1.9;
+}
+
+@media(max-width:900px){
+
+    .identity h2{
+        font-size:36px;
+    }
+
+    .identity-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =====END CREATIVE IDENTITY ===== */
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -216,6 +291,7 @@ footer{
 @media(max-width:900px){
 .hero-content h1{font-size:40px;}
 .about{grid-template-columns:1fr;}
+
 }
 
 </style>
@@ -253,7 +329,7 @@ footer{
         </h1>
 
         <p>
-            Director • Cinematographer • Editor<br>
+            Producer • Cinematographer • Editor<br>
             African storytelling with emotional precision and cinematic depth.
         </p>
 
@@ -326,9 +402,10 @@ footer{
 <!-- ABOUT -->
 <section id="about" class="about">
 
-    <img src="anga2.jpeg">
+    <img src="anga2.jpeg" alt="Anga Siyoyo">
 
     <div>
+
         <h2 style="font-family:'Playfair Display';font-size:40px;">
             The Filmmaker
         </h2>
@@ -337,6 +414,112 @@ footer{
             Anga Siyoyo is a South African filmmaker focused on emotional realism, identity, and human resilience.
             His work blends documentary and cinematic storytelling into deeply human narratives.
         </p>
+
+
+        <!-- EDUCATION -->
+        <div style="margin-top:50px;">
+
+            <p style="color:#c8a96a; letter-spacing:2px; font-size:12px; margin-bottom:15px;">
+                EDUCATION
+            </p>
+
+            <p style="color:#b8b8b8; line-height:1.8;">
+                Anga Siyoyo’s educational journey has laid a strong foundation in storytelling,
+                visual culture, and human psychology. His studies in Film and Television are
+                grounded in both theory and hands-on production, while his academic background
+                in sciences and languages developed a disciplined and analytical approach to
+                creative work.
+                <br><br>
+                This unique blend equips him to tell layered, emotionally intelligent stories
+                grounded in real-world dynamics.
+            </p>
+
+
+            <div style="margin-top:30px; border-left:2px solid #c8a96a; padding-left:20px;">
+
+                <h3 style="font-family:'Playfair Display'; font-size:22px; margin-bottom:10px;">
+                    Bachelor of Arts in Film and Television
+                </h3>
+
+                <p style="color:#888; margin-bottom:10px;">
+                    2022–2025 • University of Johannesburg, Johannesburg
+                </p>
+
+                <p style="color:#ccc; line-height:1.8;">
+                    <strong>Concentration:</strong><br>
+                    Communication and Media Studies<br>
+                    Psychology
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CREATIVE IDENTITY -->
+<section class="identity">
+
+    <div class="identity-intro">
+        <p class="small-title">THE VISION</p>
+
+        <h2>
+            Walk into the visual world of 
+            <span>Anga Siyoyo</span>
+        </h2>
+
+        <p>
+            From the heart of Johannesburg’s creative scene, Anga Siyoyo blends
+            storytelling with visual power—shaping music videos, short films,
+            and documentaries that speak to African identity, youth culture,
+            and psychological truth.
+            <br><br>
+            Whether through lens or timeline, Anga’s craft explores the layers
+            beneath human expression.
+        </p>
+    </div>
+
+
+    <div class="identity-grid">
+
+        <div class="identity-card">
+            <p class="small-title">BIO</p>
+
+            <p>
+                Currently completing a BA in Film and Television at the
+                University of Johannesburg, I have spent the past three years
+                honing my skills in producing, cinematography, lighting
+                (gaffer), and post-production editing.
+                <br><br>
+                I’ve worked on music videos, short films, and independent
+                documentaries. In 2024, I founded CSA Productions,
+                an independent company focused on bold, creative storytelling.
+            </p>
+        </div>
+
+
+        <div class="identity-card">
+            <p class="small-title">MY APPROACH</p>
+
+            <p>
+                My approach is rooted in storytelling that is emotionally
+                grounded and visually intimate.
+                <br><br>
+                I am deeply influenced by the everyday rhythms of South African
+                life—its contradictions, culture, language, and identity.
+                <br><br>
+                I am also drawn to stories of resilience through athleticism.
+                The struggles, sacrifices, and triumphs of athletes inspire me
+                to create films that capture the emotional stakes behind their
+                rise.
+                <br><br>
+                I aim to tell these stories with cinematic intensity and heart,
+                always seeking to move and inspire the audience.
+            </p>
+        </div>
+
     </div>
 
 </section>
