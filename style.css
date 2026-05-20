@@ -1,0 +1,377 @@
+:root{
+    --black:#070707;
+    --gold:#c8a96a;
+    --gray:#a0a0a0;
+}
+
+/* for cv download */
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn-outline{
+    background:transparent;
+    color:var(--gold);
+    border:1px solid var(--gold);
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:black;
+}
+
+@media(max-width:600px){
+
+    .contact-buttons{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+
+    .contact-buttons a{
+        width:220px;
+        text-align:center;
+    }
+
+}
+
+/* ===== CREATIVE IDENTITY ===== */
+.identity{
+    padding:120px 8%;
+    background:#050505;
+}
+
+.identity-intro{
+    max-width:900px;
+    margin-bottom:70px;
+}
+
+.small-title{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.identity h2{
+    font-family:'Playfair Display';
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+.identity h2 span{
+    color:var(--gold);
+}
+
+.identity-intro p:last-child{
+    color:#b8b8b8;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.identity-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.identity-card{
+    border:1px solid rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.identity-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(200,169,106,0.4);
+}
+
+.identity-card p:last-child{
+    color:#b8b8b8;
+    line-height:1.9;
+}
+
+@media(max-width:900px){
+
+    .identity h2{
+        font-size:36px;
+    }
+
+    .identity-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =====END CREATIVE IDENTITY ===== */
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:Inter;
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== INTRO SCREEN (Netflix-style) ===== */
+.intro{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.intro h1{
+    font-family:'Playfair Display';
+    font-size:32px;
+    letter-spacing:3px;
+    opacity:0;
+}
+
+/* ===== NAV ===== */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    z-index:1000;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.4);
+}
+
+.logo{
+    font-family:'Playfair Display';
+    font-size:20px;
+}
+.logo span{color:var(--gold);}
+
+.nav a{
+    margin-left:20px;
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    opacity:0.7;
+}
+.nav a:hover{opacity:1;color:var(--gold);}
+
+/* ===== HERO (Netflix style layered) ===== */
+.hero{
+    height:100vh;
+    position:relative;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4), rgba(0,0,0,1));
+}
+
+.hero-content{
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:0 8%;
+    max-width:800px;
+}
+
+.hero-content h1{
+    font-family:'Playfair Display';
+    font-size:60px;
+}
+
+.hero-content span{color:var(--gold);}
+
+.hero-content p{
+    margin-top:20px;
+    color:#ccc;
+    line-height:1.7;
+}
+
+.btn{
+    margin-top:25px;
+    padding:14px 26px;
+    background:var(--gold);
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    width:max-content;
+    font-weight:600;
+}
+
+/* ===== NETFLIX REEL (horizontal scroll) ===== */
+.reel{
+    padding:80px 8%;
+}
+
+.reel h2{
+    font-family:'Playfair Display';
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.scroll-row{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:20px;
+    scroll-snap-type:x mandatory;
+}
+
+.scroll-row::-webkit-scrollbar{
+    display:none;
+}
+
+.reel-wrapper{
+    position:relative;
+}
+
+.scroll-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,0.7);
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    transition:0.3s;
+    backdrop-filter:blur(5px);
+}
+
+.scroll-btn:hover{
+    background:var(--gold);
+    color:black;
+}
+
+.scroll-btn.left{
+    left:-20px;
+}
+
+.scroll-btn.right{
+    right:-20px;
+}
+
+@media(max-width:900px){
+
+    .scroll-btn{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+    .scroll-btn.left{
+        left:0;
+    }
+
+    .scroll-btn.right{
+        right:0;
+    }
+
+}
+
+
+
+.card{
+    min-width:280px;
+    height:420px;
+    position:relative;
+    border-radius:10px;
+    overflow:hidden;
+    scroll-snap-align:start;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card-info{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+
+.card-info h3{
+    font-family:'Playfair Display';
+}
+
+.card a{
+    text-decoration:none;
+    color:white;
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+/* ===== ABOUT ===== */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    padding:100px 8%;
+}
+
+.about img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+    text-align:center;
+    padding:100px 8%;
+}
+
+.contact h2{
+    font-family:'Playfair Display';
+    font-size:50px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#666;
+}
+
+@media(max-width:900px){
+.hero-content h1{font-size:40px;}
+.about{grid-template-columns:1fr;}
+
+}
