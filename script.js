@@ -38,30 +38,23 @@ const rightBtn = document.querySelector(".scroll-btn.right");
 let currentIndex = 0;
 
 function scrollToCard(index){
-
-    const cardWidth = cards[0].offsetWidth + 20; // 20 = gap
-
-    scrollRow.scrollTo({
-        left: cardWidth * index,
-        behavior: "smooth"
+    cards[index].scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "nearest"
     });
-
 }
 
 rightBtn.addEventListener("click", () => {
-
     if(currentIndex < cards.length - 1){
         currentIndex++;
         scrollToCard(currentIndex);
     }
-
 });
 
 leftBtn.addEventListener("click", () => {
-
     if(currentIndex > 0){
         currentIndex--;
         scrollToCard(currentIndex);
     }
-
 });
