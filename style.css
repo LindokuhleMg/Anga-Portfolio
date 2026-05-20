@@ -367,7 +367,8 @@ nav{
     }
 
     .card{
-        min-width:90%;
+    min-width:80%;
+    height:300px;
     }
 
 }
