@@ -1,4 +1,4 @@
-// INTRO ANIMATION
+// this is for the intro animation
 gsap.to(".intro h1", {
     opacity:1,
     duration:1.5,
@@ -12,12 +12,12 @@ gsap.to(".intro", {
     onComplete:()=>document.querySelector(".intro").remove()
 });
 
-// HERO TEXT
+// this is for the hero section animation
 gsap.from(".hero-content h1", {y:50, opacity:0, duration:1});
 gsap.from(".hero-content p", {y:40, opacity:0, delay:0.3});
 gsap.from(".btn", {scale:0.9, opacity:0, delay:0.6});
 
-// CARDS
+// this is for cards animation in the reel section
 gsap.from(".card", {
     scrollTrigger:{
         trigger:"#reel",
@@ -28,8 +28,7 @@ gsap.from(".card", {
     stagger:0.2
 });
 
-// FEATURED FILMS SCROLL BUTTONS
-
+// this is for the featured films scroll buttons
 const scrollRow = document.querySelector(".scroll-row");
 const leftBtn = document.querySelector(".scroll-btn.left");
 const rightBtn = document.querySelector(".scroll-btn.right");
