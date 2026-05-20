@@ -30,19 +30,38 @@ gsap.from(".card", {
 
 // this is for the featured films scroll buttons
 const scrollRow = document.querySelector(".scroll-row");
+const cards = document.querySelectorAll(".card");
+
 const leftBtn = document.querySelector(".scroll-btn.left");
 const rightBtn = document.querySelector(".scroll-btn.right");
 
-rightBtn.addEventListener("click", () => {
-    scrollRow.scrollBy({
-        left:320,
-        behavior:"smooth"
+let currentIndex = 0;
+
+function scrollToCard(index){
+
+    const cardWidth = cards[0].offsetWidth + 20; // 20 = gap
+
+    scrollRow.scrollTo({
+        left: cardWidth * index,
+        behavior: "smooth"
     });
+
+}
+
+rightBtn.addEventListener("click", () => {
+
+    if(currentIndex < cards.length - 1){
+        currentIndex++;
+        scrollToCard(currentIndex);
+    }
+
 });
 
 leftBtn.addEventListener("click", () => {
-    scrollRow.scrollBy({
-        left:-320,
-        behavior:"smooth"
-    });
+
+    if(currentIndex > 0){
+        currentIndex--;
+        scrollToCard(currentIndex);
+    }
+
 });
