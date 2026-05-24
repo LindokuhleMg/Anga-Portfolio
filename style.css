@@ -233,6 +233,10 @@ nav{
     border-radius:10px;
 }
 
+.about h2 span{
+    color:var(--gold);
+}
+
 /* this is for creative identity */
 .identity{
     padding:120px 8%;
